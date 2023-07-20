@@ -1,0 +1,928 @@
+@import './font/fonts.css';
+@import './icon/iconfont.css';
+
+
+/* --------------------------------------- 全局配置 --------------------------------------- */
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+html{
+    font-size: var(--write-font-size);
+}
+
+body {
+    background-color: var(--body-background-color);
+}
+
+#write {
+    margin: var(--write-margin);
+    padding: var(--write-padding);
+    font-family: var(--write-font-family);
+    font-weight: var(--write-font-weight);
+    line-height: var(--write-line-height);
+    color: var(--write-color);
+    background: var(--write-background);
+    border: var(--write-border);
+    border-radius: var(--write-border-radius);
+    max-width: var(--write-max-width);
+    text-align: justify;
+    letter-spacing: 0px;                 /* 字距 */
+    word-spacing: 0px;                   /* 词距 */
+    word-break: initial;                 /* 使用默认的断行规则 */
+    overflow-x: auto;                    /* 内容溢出块级元素显示滚动条 */
+}
+/* --------------------------------------------------------------------------------------- */
+
+
+/* --------------------------------------- Favico ---------------------------------------- */
+body:not(.typora-sourceview-on) content {
+    background-image: var(--favico-url);
+    background-size : var(--favico-size);
+    background-position: var(--favico-position);
+    background-repeat: no-repeat;
+}
+/* --------------------------------------------------------------------------------------- */
+
+
+/* ---------------------------------------- YAML ----------------------------------------- */
+pre.md-meta-block {
+    margin: var(--yaml-margin);
+    padding: var(--yaml-padding);
+    font-family: var(--yaml-font-family);
+    font-size: var(--yaml-font-size);
+    font-weight: var(--yaml-font-weight);
+    line-height: var(--yaml-line-height);
+    color: var(--yaml-color);
+    background-color: var(--yaml-background-color);
+    border: var(--yaml-border);
+    border-radius: var(--yaml-border-radius);
+}
+/* --------------------------------------------------------------------------------------- */
+
+
+/* ------------------------------------------ 目录 --------------------------------------- */
+.md-toc {
+    margin: var(--toc-margin);
+    padding: var(--toc-padding);
+    background-color: var(--toc-background-color);
+    border: var(--toc-border);
+    border-radius: var(--toc-border-radius);
+}
+
+.md-tooltip-hide>span {      /* 消除自带的"目录"二字 */
+    display: none;
+}
+
+.md-toc:before {             /* 自定义"目录"二字 */
+    position: relative;
+    left: 5px;
+    bottom: 0px;
+    display: inline-block;
+    content: '目录';
+    font-family: var(--toc-title-font-family);
+    font-size: var(--toc-title-font-size);
+    font-weight: var(--toc-title-font-weight);
+    line-height: var(--toc-title-line-height);
+    color: var(--toc-title-color);
+}
+
+#write div.md-toc-tooltip {   /* 设置自带工具条 */
+    position: absolute;
+    top: -30px;
+    border: none;
+    background-color: transparent;
+}
+
+.md-toc-content,
+.md-toc:focus .md-toc-content {
+    margin: 0px;
+    padding: 5px;
+    line-height: var(--toc-content-line-height);
+    border: none;
+    border-top: var(--toc-content-border-top);
+}
+
+.md-toc-h1 .md-toc-inner{
+    text-indent: 0em;
+}
+.md-toc-h2 .md-toc-inner{
+    text-indent: 2em;
+}
+.md-toc-h3 .md-toc-inner{
+    text-indent: 4em;
+}
+
+#write a.md-toc-inner {
+    font-family: var(--toc-content-font-family);
+    font-size: var(--toc-content-font-size);
+    font-weight: var(--toc-content-font-weight);
+    color: var(--toc-content-color);
+    background-color: var(--toc-background-color);
+    border-bottom: none;
+}
+
+#write a.md-toc-inner:hover{
+    color: var(--toc-content-hover-color);
+    font-weight: var(--toc-content-hover-font-weight);
+    text-decoration: none;
+}
+/* --------------------------------------------------------------------------------------- */
+
+
+/* ----------------------------------------- 标题 ---------------------------------------- */
+h1 {
+    margin: var(--h1-margin);
+    padding: var(--h1-padding);
+    font-family: var(--h1-font-family);
+    font-size: var(--h1-font-size);
+    font-weight: var(--h1-font-weight);
+    line-height: var(--h1-font-line-height);
+    display: block;
+    text-align: center; 
+}
+h1 span{
+    border-bottom: var(--h1-span-border-bottom);
+}
+h1:before {
+    margin-right: var(--h1-icon-margin-right);
+    font-family: "iconfont";
+    content: var(--h1-icon);
+    color: var(--h1-icon-color);
+}
+
+h2 {
+    margin: var(--h2-margin);
+    padding: var(--h2-padding);
+    font-family: var(--h2-font-family);
+    font-size: var(--h2-font-size);
+    font-weight: var(--h2-font-weight);
+    line-height: var(--h2-line-height);
+    display: block;
+    text-align: left;
+}
+h2 span{
+    border-bottom: var(--h2-span-border-bottom);
+}
+h2:before {
+    margin-right: var(--h2-icon-margin-right);
+    font-family: "iconfont";
+    content: var(--h2-icon);
+    color: var(--h2-icon-color);
+}
+
+h3 {
+    margin: var(--h3-margin);
+    padding: var(--h3-padding);
+    font-family: var(--h3-font-family);
+    font-size: var(--h3-font-size);
+    font-weight: var(--h3-font-weight);
+    line-height: var(--h3-line-height);
+    display: block;
+    text-align: left;
+}
+h3 span{
+    border-bottom: var(--h3-span-border-bottom);
+}
+h3:before {
+    margin-right: var(--h3-icon-margin-right);
+    font-family: "iconfont";
+    content: var(--h3-icon);
+    color: var(--h3-icon-color);
+}
+h3.md-focus:before{
+    position: relative;
+    top: 0px;
+    left: 0px;
+    margin-right: var(--h3-icon-margin-right);
+    padding: 0px;
+    font-family: "iconfont";
+    content: var(--h3-icon);
+    border: none;
+    font-size: inherit;
+    line-height: inherit;
+    float: none;
+    vertical-align: baseline;
+}
+/* --------------------------------------------------------------------------------------- */
+
+
+/* ----------------------------------------- 引用块 -------------------------------------- */
+blockquote{
+    margin: var(--blockquote-margin);
+    padding: var(--blockquote-padding);
+    font-family: var(--blockquote-font-family);
+    font-size: var(--blockquote-font-size);
+    font-weight: var(--blockquote-font-weight);
+    line-height: var(--blockquote-line-height);
+    border-left: var(--blockquote-border-left);
+    background-color:  var(--blockquote-background-color);
+}
+
+blockquote[alt="info"]>*,
+blockquote[alt="warn"]>*,
+blockquote[alt="success"]>*,
+blockquote[alt="danger"]>* {
+    margin-left: 1.5em;
+}
+
+blockquote[alt="info"] {
+    border-left: var(--info-blockquote-border-left);
+    background-color: var(--info-blockquote-background-color);
+}
+blockquote[alt="info"]::before {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    margin: 0px;
+    padding-right: 5px;
+    font-family: "iconfont";
+    content: '\e601';
+}
+
+blockquote[alt="warn"] {
+    border-left: var(--warn-blockquote-border-left);
+    background-color: var(--warn-blockquote-background-color);
+}
+blockquote[alt="warn"]::before {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    margin: 0px;
+    padding-right: 5px;
+    font-family: "iconfont";
+    content: '\e600';
+}
+
+blockquote[alt="danger"] {
+    border-left: var(--danger-blockquote-border-left);
+    background-color: var(--danger-blockquote-background-color);
+}
+blockquote[alt="danger"]::before {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    margin: 0px;
+    padding-right: 5px;
+    font-family: "iconfont";
+    content: '\e614';
+}
+
+blockquote[alt="success"] {
+    border-left: var(--success-blockquote-border-left);
+    background-color: var(--success-blockquote-background-color);
+}
+blockquote[alt="success"]::before {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    margin: 0px;
+    padding-right: 5px;
+    font-family: "iconfont";
+    content: '\e605';
+}
+
+/* --------------------------------------------------------------------------------------- */
+
+
+/* ---------------------------------------- 注释 ----------------------------------------- */
+.md-comment{
+    font-family: var(--annotation-font-family);
+    font-size: var(--annotation-font-size);
+    font-weight: var(--annotation-font-weight);
+    color: var(--annotation-color);
+    line-height: var(--annotation-line-height);
+    opacity: 1;
+}
+/* --------------------------------------------------------------------------------------- */
+
+
+/* ----------------------------------------- 超链接 --------------------------------------- */
+#write a {
+    margin: var(--link-margin);
+    padding: var(--link-padding);
+    font-family: var(--link-font-family);
+    font-size: var(--link-font-size);
+    font-weight: var(--link-font-weight);
+    line-height: var(--link-line-height);
+    color: var(--link-color);
+    background-color: var(--link-background-color);
+    border-bottom: var(--link-border-bottom);
+    text-decoration: none;
+    cursor: pointer;
+}
+#write a:hover {
+    color: var(--link-hover-color);
+    font-weight: var(--link-hover-font-weight);
+}
+/* --------------------------------------------------------------------------------------- */
+
+
+/* ----------------------------------------- 字体特效 ------------------------------------- */
+/* 小标签 */
+font {
+    display: inline;
+    text-align: center;
+    vertical-align: baseline;
+    margin: var(--note-margin);
+    padding: var(--note-padding);
+    font-family: var(--note-font-family);
+    font-size: var(--note-font-size);
+    font-weight: var(--note-font-weight);
+    line-height: var(--note-line-height);
+    color: var(--note-color);
+    background-color: var(--note-background-color-default);
+    border: var(--note-border);
+    border-radius: var(--note-border-radius);
+}
+font[title="red"] {
+    background-color:#fe5f58;
+}
+font[title="yellow"] {
+    background-color:#ffc50a;
+}
+font[title="green"] {
+    background-color:#8bc34a;
+}
+font[title="blue"] {
+    background-color:#02aaf4;
+}
+font[title="gray"] {
+    background-color:#4c4c4c;
+}
+
+/*  强调型文本  */
+span[alt]{
+    margin: var(-emp-margin);
+    padding: var(--emp-padding);
+    font-family: var(--emp-font-family);
+    font-size: var(--emp-font-size);
+    font-weight: var(--emp-font-weight);
+    line-height: var(--emp-line-height);
+}
+span[alt='solid'] {
+    text-decoration-line: underline;
+    text-decoration-color: var(--emp-line-color);
+    text-decoration-style: solid;
+    text-underline-offset: 2px;
+    text-decoration-thickness: 2px;
+    text-decoration-skip-ink: none;
+}
+span[alt='dashed'] {
+    text-decoration-line: underline;
+    text-decoration-color: var(--emp-line-color);
+    text-decoration-style: dashed;
+    text-underline-offset: 2px;
+    text-decoration-thickness: 2px;
+    text-decoration-skip-ink: none;
+}
+span[alt='dotted'] {
+    text-decoration-line: underline;
+    text-decoration-color: var(--emp-line-color);
+    text-decoration-style: dotted;
+    text-underline-offset: 2px;
+    text-decoration-thickness: 3px;
+    text-decoration-skip-ink: none;
+}
+span[alt='wavy'] {
+    text-decoration-line: underline;
+    text-decoration-color: var(--emp-line-color);
+    text-decoration-style: wavy;
+    text-underline-offset: 2px;
+    text-decoration-thickness: 2px;
+    text-decoration-skip-ink: none;
+}
+span[alt='delete'] {
+    text-decoration-line: line-through;
+    text-decoration-color: var(--emp-line-color);
+    text-decoration-style: solid;
+    text-decoration-thickness: 2px;
+}
+span[alt='shadow']{
+    text-shadow: 1px 1px 2px #FC0;
+}
+
+/* 高亮 */
+#write span[md-inline="highlight"] mark{
+    margin: 0px; 
+    padding: 2px 4px;
+    font-family: var(--highlight-font-family);
+    font-size: var(--highlight-font-size);
+    font-weight: var(--hightight-font-weight);
+    color: var(--highlight-color);
+    background: var(--highlight-background-color);
+    border-radius: var(--highlight-border-radius);
+}
+
+/* 空心字特效 */
+span[alt="hollow"]{
+    color:white;
+    text-shadow:1px 1px black,-1px -1px black,1px -1px black,-1px 1px black;
+}
+
+/* 闪烁特效 */
+@keyframes blink-smooth{50%{color:transparent;}}
+span[alt="blink"]{
+  animation:0.5s blink-smooth infinite alternate linear;
+}
+
+/* KBD */
+kbd {
+    margin: var(--kbd-margin);
+    padding: var(--kbd-padding);
+    vertical-align: baseline;
+    font-family: var(--kbd-font-family);
+    font-size: var(--kbd-font-size);
+    font-weight: var(--kbd-font-weight);
+    color: var(--kbd-color);
+    background-color: var(--kbd-background-color);
+    border-radius: var(--kbd-border-radius);
+    border-width: var(--kbd-border-width);
+    border-color: var(--kbd-border-color);
+}
+/* --------------------------------------------------------------------------------------- */
+
+
+/* ------------------------------------------ 折叠标签 ------------------------------------ */
+details {
+    padding: 16px 8px;
+}
+
+details>summary {
+    display: list-item;
+    position: relative;
+    margin: -16px -8px;
+    padding: 16px 8px;
+    font-family: var(--details-title-font-family);
+    font-size: var(--details-title-font-size);
+    font-weight: var(--details-title-font-weight);
+    line-height: var(--details-title-line-height);
+    color: var(--details-title-color);
+    background: var(--details-title-background-color);
+    border: var(--details-border-before);
+    border-radius: var(--details-border-radius);
+}
+
+details[open] {
+    padding: 16px 8px 0px 8px;
+    font-family: var(--details-content-font-family);
+    font-size: var(--details-content-font-size);
+    font-weight: var(--details-content-font-weight);
+    line-height: var(--details-content-line-height);
+    color: var(--details-content-color);
+    background-color: var(--details-content-background-color);
+    border: var(--details-border-after);
+    border-radius: var(--details-border-radius);
+}
+
+details[open]>summary {
+    margin-bottom: 0px;
+    padding: 16px 8px;
+    font-family: var(--details-title-font-family);
+    font-size: var(--details-title-font-size);
+    font-weight: var(--details-title-font-weight);
+    line-height: var(--details-title-line-height);
+    color: var(--details-title-color);
+    background-color: var(--details-title-background-color);
+    border: none;
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+}
+/* --------------------------------------------------------------------------------------- */
+
+
+/* --------------------------------------- 水平线 ---------------------------------------- */
+hr {
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    border: none;
+    border-bottom: var(--hr-style);
+}
+/* --------------------------------------------------------------------------------------- */
+
+
+/* ---------------------------------------- 脚注 ----------------------------------------- */
+#write .md-footnote {
+    font-family: var(--fontnote-family);
+    font-size: var(--fontnote-size);
+    font-weight: var(--fontnote-weight);
+    line-height: 1.0;
+    color: var(--footnote-color);
+    background: var(--footnote-bg-color);
+}
+
+#write sup.md-footnote{
+    margin: 0px;
+    padding: 0px;
+    border: none;
+}
+/* --------------------------------------------------------------------------------------- */
+
+
+/* ---------------------------------------- 参考文献 -------------------------------------- */
+.md-def-footnote{
+    font-family: var(--font-refer-font-family);
+}
+
+.md-def-footnote .md-def-name:before{
+    content: '[';
+}
+
+.md-def-name{
+    padding-left: 1ch;
+    padding-right: 1.8ch;
+}
+/* --------------------------------------------------------------------------------------- */
+
+
+/* ------------------------------------ 行内数学公式 -------------------------------------- */
+[md-inline='inline_math'] {
+    color: var(--inline-eq-color);
+    font-size: var(--inline-eq-font-size);
+}
+/* --------------------------------------------------------------------------------------- */
+
+
+/* ------------------------------------ 普通数学公式 -------------------------------------- */
+.md-math-container{
+    color: var(--eq-color);
+    font-size: var(--eq-font-size);
+}
+/* --------------------------------------------------------------------------------------- */
+
+
+/* --------------------------------------- 行内代码 --------------------------------------- */
+#write code {
+    margin: var(--inline-code-margin);
+    padding: var(--inline-code-padding);
+    font-family: var(--inline-code-font-family);
+    font-size: var(--inline-code-font-size);
+    font-weight: var(--inline-code-font-weight);
+    line-height: var(--inline-code-line-height);
+    color: var(--inline-code-color);
+    background-color: var(--inline-code-background-color);
+    border-radius: var(--inline-code-border-radius);
+}
+/* --------------------------------------------------------------------------------------- */
+
+
+/* ----------------------------------------- 代码块 --------------------------------------- */
+/* 代码块顶栏 */
+.md-fences {
+    padding-top: 30px;
+    background-color: var(--code-top-background-color);
+    border: var(--code-border);
+    border-radius: var(--code-border-radius);
+}
+.md-fences::before {
+    position: absolute;
+    left: 10px;
+    top: 8px;
+    content: '';
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: rgb(252, 98, 93);
+    box-shadow: 25px 0px rgb(253, 188, 64),
+                50px 0px rgb(53, 205, 75);
+}
+
+/* 代码块主体 */
+.cm-s-inner.CodeMirror {
+    margin: 0px;
+    padding: 6px;
+    font-family: var(--code-font-family);
+    font-size: var(--code-font-size);
+    font-weight: var(--code-font-weight);
+    color: var(--code-color);
+    background-color: var(--code-body-background-color);
+    border-top: 1px solid var(--code-body-border-top-color);
+    border-bottom-left-radius: var(--code-border-radius);
+    border-bottom-right-radius: var(--code-border-radius);
+}
+
+/* 代码块行号 */
+.cm-s-inner .CodeMirror-linenumber {
+    color: var(--code-linenum-color);
+    font-weight: var(--code-linenum-font-weight);
+}
+
+/* 代码块光标 */
+#write .CodeMirror-cursors .CodeMirror-cursor {
+    border-left: var(--code-cursor-border);
+}
+
+/* 行号与代码分割线 */
+.CodeMirror-wrap .CodeMirror-code pre {
+    border-left: var(--code-divided-line-border);
+}
+
+/* 代码语言输入框 */
+.md-fences .code-tooltip{
+    padding: 0px;
+    background-color: var(--code-inputbox-color);
+}
+.code-tooltip .ty-input{
+    border: var(--code-inputbox-border);
+}
+.code-tooltip .ty-input:focus{
+    border: var(--code-inputbox-focus-border);
+}
+
+/* 选中的行 */
+.md-fences.md-focus .CodeMirror-code>div.CodeMirror-activeline {
+    background-color: var(--code-selected-line-color);
+}
+
+/* 选中的代码 */
+.cm-s-inner .CodeMirror-selected {
+    background-color: var(--code-selected-code-color) !important;
+}
+.cm-s-inner .CodeMirror-selectedtext {
+    background-color: transparent !important;
+}
+
+/* 代码块变量颜色 */
+.cm-s-inner .cm-keyword {
+    color: #c792ea !important;
+}
+.cm-s-inner .cm-operator {
+    color: #89ddff !important;
+}
+.cm-s-inner .cm-variable-2 {
+    color: #eeffff !important;
+}
+.cm-s-inner .cm-variable-3 {
+    color: #f07178 !important;
+}
+.cm-s-inner .cm-type {
+    color: #f07178 !important;
+}
+.cm-s-inner .cm-builtin {
+    color: #ffcb6b !important;
+}
+.cm-s-inner .cm-atom {
+    color: #f78c6c !important;
+}
+  .cm-s-inner .cm-number {
+    color: #ff5370 !important;
+}
+.cm-s-inner .cm-def {
+    color: rgb(130, 170, 255) !important;
+}
+.cm-s-inner .cm-string {
+    color: #a2c077 !important;
+}
+.cm-s-inner .cm-string-2 {
+    color: #f07178 !important;
+}
+.cm-s-inner .cm-comment {
+    color: #fff !important;
+}
+.cm-s-inner .cm-variable {
+    color: #f07178 !important;
+}
+.cm-s-inner .cm-tag {
+    color: #ff5370 !important;
+}
+.cm-s-inner .cm-meta {
+    color: #ffcb6b !important;
+}
+.cm-s-inner .cm-attribute {
+    color: #c792ea !important;
+}
+.cm-s-inner .cm-property {
+    color: #c792ea !important;
+}
+.cm-s-inner .cm-qualifier {
+    color: #decb6b !important;
+}
+.cm-s-inner .cm-variable-3,
+.cm-s-inner .cm-type {
+    color: #decb6b !important;
+}
+.cm-s-inner .cm-error {
+    color: #fff !important;
+    background-color: #ff5370 !important;
+}
+/* --------------------------------------------------------------------------------------- */
+
+
+/* --------------------------------------- 有序列表 --------------------------------------- */
+#write ol {
+    margin: var(--order-list-margin);
+    padding: var(--order-list-padding);
+    font-family: var(--order-list-font-family);
+    font-size: var(--order-list-font-size);
+    font-weight: var(--order-list-font-weight);
+    color: var(--order-list-color);
+    line-height: var(--order-list-line-height);
+    list-style-type: none;
+}
+
+li {
+    margin: var(--order-list-li-margin);
+}
+
+#write ol li > * {
+    margin: 0px 0px 0px var(--order-list-li-indentation);
+}
+
+#write ol>li:before {
+    position: absolute;
+    color: var(--order-list-sign-color);
+    content: counter(li) ".";
+    counter-increment: li;
+    width: 22px;
+    text-align: right;
+    left: -12px;
+}
+
+#write ol li:first-child {
+    counter-reset: li;
+}
+/* --------------------------------------------------------------------------------------- */
+
+
+/* --------------------------------------- 无序列表 --------------------------------------- */
+#write ul {
+    margin: var(--unorder-list-margin);
+    padding: var(--unorder-list-padding);
+    font-family: var(--unorder-list-font-family);
+    font-size: var(--unorder-list-font-size);
+    font-weight: var(--unorder-list-font-weight);
+    color: var(--unorder-list-color);
+    line-height: var(--unorder-list-line-height);
+    list-style-type: none;
+}
+
+li {
+    margin: var(--unorder-list-li-margin);
+}
+
+#write ul li > * {
+    margin: 0px 0px 0px var(--unorder-list-li-indentation);
+}
+
+#write ul>li:before {
+    position: absolute;
+    top: var(--unorder-list-sign-top);
+    left: var(--unorder-list-sign-left);
+    color: var(--unorder-list-sign-color);
+    font-family: 'iconfont';
+    font-size: var(--unorder-list-sign-font-size);
+    content: '\e640';
+    display: flex;
+}
+
+#write ul li:first-child {
+    counter-reset: li;
+}
+/* --------------------------------------------------------------------------------------- */
+
+
+/* ---------------------------------------- 任务列表 ------------------------------------- */
+#write .md-task-list-item:before{
+    content: '';
+}
+
+#write .md-task-list-item>input{
+    margin: 0px;
+    padding: 0px;
+    width: 0px;
+    height: 0px;
+    line-height: var(--task-line-height);
+}
+
+#write .md-task-list-item>input:before {
+    position: relative;
+    top: var(--task-sign-top);
+    left: var(--task-sign-left);
+    display: inline-block;
+    content: '';
+    width: var(--task-sign-width);
+    height: var(--task-sign-height);
+    text-align: center;
+    vertical-align: middle;
+    background-color: var(--task-unselect-background-color);
+    border: var(--task-unselect-border);
+    border-radius: var(--task-unselect-border-radius);
+}
+
+#write .md-task-list-item>input[checked]:before{
+    position: relative;
+    top: var(--task-sign-top);
+    left: var(--task-sign-left);
+    display: inline-block;
+    content: '\e63c';
+    font-family: "iconfont";
+    width: var(--task-sign-width);
+    height: var(--task-sign-height);
+    text-align: center;
+    vertical-align: middle;
+    border: none;
+}
+
+#write .md-task-list-item p{
+    margin: 0px var(--task-content-indentation);
+}
+/* ------------------------------------------------------------------------------------- */
+
+
+/* ------------------------------------- 图片 ------------------------------------------ */
+.md-image img {
+    margin: var(--img-margin);
+    padding: var(--img-padding);
+    text-align: center;
+    border: var(--img-border);
+    border-radius: var(--img-border-radius);
+    content: var(--img-name);
+}
+
+#write{
+    counter-reset: imgNum;
+}
+
+.md-image:after{
+    margin-top: 10px;
+    display: block;
+    text-align: center;
+    font-family: var(--img-font-family);
+    font-size: var(--img-font-size);
+    content: var(--img-name);
+    counter-increment: imgNum;
+}
+/* ------------------------------------------------------------------------------------- */
+
+
+/* ---------------------------------------- 表格 --------------------------------------- */
+/* 普通表格 */
+figure{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+table {
+    margin: var(--table-margin);
+    padding: var(--table-padding);
+    font-family: var(--table-font-family);
+    font-size: var(--table-font-size);
+    line-height: var(--table-line-height);
+    text-align: center;
+    width: var(--table-width);
+}
+table tr {
+    font-weight: var(--table-tr-font-weight); 
+    background-color: var(--table-odd-row-color);
+    border: var(--table-border);
+}
+table tr:nth-child(2n) {
+    background-color: var(--table-even-row-color);
+    border: var(--table-border);
+}
+table tr th {
+    padding: 5px 10px;
+    font-weight: var(--table-th-font-weight); 
+    background-color: var(--table-th-background-color);
+    border: var(--table-border); 
+}
+table tr td {
+    padding: 5px 10px;
+    border: var(--table-border);
+}
+
+/* 三线表 */
+div[alt="three-table"] table tr {
+    border: none;  
+    background-color: #fff;
+    font-weight: var(--table-tr-font-weight); 
+}
+
+div[alt="three-table"] table tr th{
+    border: none;
+    border-top: 2px solid #000;
+    border-bottom: 2px solid #000;
+    font-weight: var(--table-th-font-weight); 
+    font-size: var(--table-font-size);
+    background-color: #fff;
+}
+
+div[alt="three-table"] table tr td{
+    border: none;
+}
+div[alt="three-table"] table tr:nth-last-child(1){
+    border-bottom: 2px solid #000;
+}
+
+*[alt="center"]{
+    text-align: center;
+}
+*[alt="left"]{
+    text-align: left;
+}
+*[alt="right"]{
+    text-align: right;
+}
+/* ------------------------------------------------------------------------------------- */

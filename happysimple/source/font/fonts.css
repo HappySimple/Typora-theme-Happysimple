@@ -1,0 +1,127 @@
+/* 阿里普惠体 */
+@font-face {
+    font-family: 'Ali_PuHuiTi';
+    src: url('./阿里普惠体/Alibaba_PuHuiTi_2.0_35_Thin_35_Thin.ttf') format('truetype');
+    font-weight: 100;
+}
+@font-face {
+    font-family: 'Ali_PuHuiTi';
+    src: url('./阿里普惠体/Alibaba_PuHuiTi_2.0_45_Light_45_Light.ttf') format('truetype');
+    font-weight: 200;
+}
+@font-face {
+    font-family: 'Ali_PuHuiTi';
+    src: url('./阿里普惠体/Alibaba_PuHuiTi_2.0_55_Regular_55_Regular.ttf') format('truetype');
+    font-weight: 300;
+}
+@font-face {
+    font-family: 'Ali_PuHuiTi';
+    src: url('./阿里普惠体/Alibaba_PuHuiTi_2.0_65_Medium_65_Medium.ttf') format('truetype');
+    font-weight: 400;
+}
+@font-face {
+    font-family: 'Ali_PuHuiTi';
+    src: url('./阿里普惠体/Alibaba_PuHuiTi_2.0_75_SemiBold_75_SemiBold.ttf') format('truetype');
+    font-weight: 500;
+}
+@font-face {
+    font-family: 'Ali_PuHuiTi';
+    src: url('./阿里普惠体/Alibaba_PuHuiTi_2.0_55_Regular_85_Bold.ttf') format('truetype');
+    font-weight: 600;
+}
+@font-face {
+    font-family: 'Ali_PuHuiTi';
+    src: url('./阿里普惠体/Alibaba_PuHuiTi_2.0_95_ExtraBold_95_ExtraBold.ttf') format('truetype');
+    font-weight: 700;
+}
+@font-face {
+    font-family: 'Ali_PuHuiTi';
+    src: url('./阿里普惠体/Alibaba_PuHuiTi_2.0_105_Heavy_105_Heavy.ttf') format('truetype');
+    font-weight: 800;
+}
+@font-face {
+    font-family: 'Ali_PuHuiTi';
+    src: url('./阿里普惠体/Alibaba_PuHuiTi_2.0_115_Black_115_Black.ttf') format('truetype');
+    font-weight: 900;
+}
+
+/* 思源黑体 */
+@font-face {
+    font-family: 'SiYuan_HeiTi';
+    src: url('./思源黑体/Source_Han_Sans_SC_ExtraLight_ExtraLight.otf') format('truetype');
+    font-weight: 100;
+}
+@font-face {
+    font-family: 'SiYuan_HeiTi';
+    src: url('./思源黑体/Source_Han_Sans_SC_Light_Light.otf') format('truetype');
+    font-weight: 200;
+}
+@font-face {
+    font-family: 'SiYuan_HeiTi';
+    src: url('./思源黑体/Source_Han_Sans_SC_Normal_Normal.otf') format('truetype');
+    font-weight: 300;
+}
+@font-face {
+    font-family: 'SiYuan_HeiTi';
+    src: url('./思源黑体/Source_Han_Sans_SC_Regular.otf') format('truetype');
+    font-weight: 400;
+}
+@font-face {
+    font-family: 'SiYuan_HeiTi';
+    src: url('./思源黑体/Source_Han_Sans_SC_Medium_Medium.otf') format('truetype');
+    font-weight: 500;
+}
+@font-face {
+    font-family: 'SiYuan_HeiTi';
+    src: url('./思源黑体/Source_Han_Sans_SC_Bold.otf') format('truetype');
+    font-weight: 600;
+}
+@font-face {
+    font-family: 'SiYuan_HeiTi';
+    src: url('./思源黑体/Source_Han_Sans_SC_Heavy_Heavy.otf') format('truetype');
+    font-weight: 700;
+}
+
+/* 霞鹜文楷 */
+@font-face {
+    font-family: 'XiaWuWenKai';
+    src: url('./霞鹜文楷/LXGWWenKai-Light.ttf') format('truetype');
+    font-weight: 100;
+}
+@font-face {
+    font-family: 'XiaWuWenKai';
+    src: url('./霞鹜文楷/LXGWWenKai-Regular.ttf') format('truetype');
+    font-weight: 200;
+}
+@font-face {
+    font-family: 'XiaWuWenKai';
+    src: url('./霞鹜文楷/LXGWWenKai-Bold.ttf') format('truetype');
+    font-weight: 300;
+}
+
+/* 站酷仓耳渔阳体 */
+@font-face {
+    font-family: 'ZhanKu_YvYangTi';
+    src: url('./站酷仓耳渔阳体/TsangerYuYangT_W01_W01.ttf') format('truetype');
+    font-weight: 100;
+}
+@font-face {
+    font-family: 'ZhanKu_YvYangTi';
+    src: url('./站酷仓耳渔阳体/TsangerYuYangT_W02_W02.ttf') format('truetype');
+    font-weight: 200;
+}
+@font-face {
+    font-family: 'ZhanKu_YvYangTi';
+    src: url('./站酷仓耳渔阳体/TsangerYuYangT_W03_W03.ttf') format('truetype');
+    font-weight: 300;
+}
+@font-face {
+    font-family: 'ZhanKu_YvYangTi';
+    src: url('./站酷仓耳渔阳体/TsangerYuYangT_W04_W04.ttf') format('truetype');
+    font-weight: 400;
+}
+@font-face {
+    font-family: 'ZhanKu_YvYangTi';
+    src: url('./站酷仓耳渔阳体/TsangerYuYangT_W05_W05.ttf') format('truetype');
+    font-weight: 500;
+}
