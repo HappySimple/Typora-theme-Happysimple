@@ -53,6 +53,8 @@ $$
 
 `print('Hello World')`
 
+
+
 ```matlab
 clear;clc;
 
@@ -84,15 +86,13 @@ R = sprintf('%.2f',R(1,2));
   
 
 
-- [x] 事项1
+- [ ] 事项1
 - [ ] 事项2
 - [ ] 事项3
 
 
 
 <img src="./happysimple/assets/Typora_02.png" alt="Typora" style="width:30vw;" />
-
-​                         <img src="./happysimple/assets/Typora_02.png" alt="Typora" style="width:30vw;" />  <img src="./happysimple/assets/Typora_02.png" alt="Typora" style="width:30vw;" />
 
 
 
@@ -132,7 +132,6 @@ R = sprintf('%.2f',R(1,2));
 </table>
 </div>
 </center> 
-
 
 
 [^1]:张亭,赵庆鑫,钟慧鑫,张一彬,朱云聪,冯建迪.国际参考电离层2016模型在陆海区域的精度分析J.测绘科学,2021,46(09):14-33.DOI:10.16251/j.cnki.1009-2307.2021.09.003.
