@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b0a1b6c7-8b81-4cfd-bd5b-88766a10b444" name="Changes" comment="" />
+    <list default="true" id="b0a1b6c7-8b81-4cfd-bd5b-88766a10b444" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/demo.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/happysimple.css" beforeDir="false" afterPath="$PROJECT_DIR$/happysimple.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/happysimple/source/happysimple-set.css" beforeDir="false" afterPath="$PROJECT_DIR$/happysimple/source/happysimple-set.css" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -43,6 +47,7 @@
       <workItem from="1689949840651" duration="81000" />
       <workItem from="1689995826196" duration="15000" />
       <workItem from="1690098495281" duration="5000" />
+      <workItem from="1690348685060" duration="13000" />
     </task>
     <servers />
   </component>

@@ -255,23 +255,26 @@
     --order-list-color: #000;
     --order-list-line-height: 2.0;                 /* 有序列表各项的行高 */
     --order-list-li-margin: 10px 0px;              /* 有序列表各项的间距 */
-    --order-list-li-indentation: 1.0em;             /* 有序列表内容的缩进 */
+    --order-list-li-indentation: 1.0em;            /* 有序列表内容的缩进 */
     --order-list-sign-color: #db524f;            /* 有序列表的数字颜色 */
 
-    /* 有序列表 */
+    /* 无序列表 */
     --unorder-list-margin: 10px 0px;
     --unorder-list-padding: 0px;
     --unorder-list-font-family: 'SiYuan_HeiTi';
     --unorder-list-font-size: 1.0rem;
-    --unorder-list-font-weight: 300;
-    --unorder-list-color: #000;
-    --unorder-list-line-height: 2.0;                 /* 无序列表各项的行高 */
-    --unorder-list-li-margin: 10px 0px;              /* 无序列表各项的间距 */
-    --unorder-list-li-indentation: 1.0em;            /* 无序列表内容的缩进 */
-    --unorder-list-sign-color: #db524f;            /* 无序列表的数字颜色 */
-    --unorder-list-sign-font-size: 30px;             /* 无序列表的符号大小 */
-    --unorder-list-sign-top: -13px;                  /* 用于调整无序列表的符号的位置 */
-    --unorder-list-sign-left: -12px;                 /* 用于调整无序列表的符号的位置 */
+    --unorder-list-font-weight: 300; 
+    --unorder-list-color: #000;                   /* 无序列表的字体颜色 */
+    --unorder-list-line-height: 2.0;                /* 无序列表各项的行高 */
+    --unorder-list-li-margin: 10px 0px;             /* 无序列表各项的间距 */
+    --unorder-list-li-indentation: 1.2em;           /* 无序列表内容的缩进 */
+    --unorder-list-sign-color: #db524f;           /* 无序列表符号的边框颜色 */
+    --unorder-list-background-color: #fff;        /* 无序列表符号的背景颜色 */
+    --unorder-list-sign-width: 0.8rem;              /* 无序列表符号的宽度 */
+    --unorder-list-sign-height: 0.8rem;             /* 无序列表符号的长度 */
+    --unorder-list-sign-top: 10px;                  /* 用于调整无序列表符号的位置 */
+    --unorder-list-sign-left: 0px;                  /* 用于调整无序列表符号的位置 */
+    --unorder-list-border-radius: 100%;             /* 用于调整无序列表符号的形状*/
 
     /* 任务列表 */
     --task-line-height: 1.2;

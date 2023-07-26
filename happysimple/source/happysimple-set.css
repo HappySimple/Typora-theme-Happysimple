@@ -2,6 +2,20 @@
 @import './icon/iconfont.css';
 
 
+/* --------------------------------------- PDF配置 --------------------------------------- */
+@media print {
+  @page {
+  	margin: 2mm 0mm; 
+  }
+  html{
+	font-size: 11px !important;
+  }
+  img {
+    border: var(--img-border) !important;
+    border-radius: var(--img-border-radius) !important;
+  }
+}
+
 /* --------------------------------------- 全局配置 --------------------------------------- */
 *{
     margin: 0px;
@@ -231,7 +245,7 @@ blockquote[alt="info"] {
     border-left: var(--info-blockquote-border-left);
     background-color: var(--info-blockquote-background-color);
 }
-blockquote[alt="info"]::before {
+blockquote[alt="info"]:before {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -245,7 +259,7 @@ blockquote[alt="warn"] {
     border-left: var(--warn-blockquote-border-left);
     background-color: var(--warn-blockquote-background-color);
 }
-blockquote[alt="warn"]::before {
+blockquote[alt="warn"]:before {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -259,7 +273,7 @@ blockquote[alt="danger"] {
     border-left: var(--danger-blockquote-border-left);
     background-color: var(--danger-blockquote-background-color);
 }
-blockquote[alt="danger"]::before {
+blockquote[alt="danger"]:before {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -273,7 +287,7 @@ blockquote[alt="success"] {
     border-left: var(--success-blockquote-border-left);
     background-color: var(--success-blockquote-background-color);
 }
-blockquote[alt="success"]::before {
+blockquote[alt="success"]:before {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -282,7 +296,6 @@ blockquote[alt="success"]::before {
     font-family: "iconfont";
     content: '\e605';
 }
-
 /* --------------------------------------------------------------------------------------- */
 
 
@@ -446,6 +459,7 @@ kbd {
 
 /* ------------------------------------------ 折叠标签 ------------------------------------ */
 details {
+	margin: 20px 0px;
     padding: 16px 8px;
 }
 
@@ -766,15 +780,20 @@ li {
     margin: 0px 0px 0px var(--unorder-list-li-indentation);
 }
 
-#write ul>li:before {
+#write ul li:before {
     position: absolute;
     top: var(--unorder-list-sign-top);
     left: var(--unorder-list-sign-left);
-    color: var(--unorder-list-sign-color);
-    font-family: 'iconfont';
-    font-size: var(--unorder-list-sign-font-size);
-    content: '\e640';
-    display: flex;
+    display: inline-block;
+    content: '';
+    width: var(--unorder-list-sign-width);
+    height: var(--unorder-list-sign-height);
+    text-align: center;
+    vertical-align: middle;
+    color: var(--unorder-list-color);
+    background-color: var(--unorder-list-background-color);
+    border: 2px solid var(--unorder-list-sign-color);
+    border-radius: var(--unorder-list-border-radius);
 }
 
 #write ul li:first-child {
@@ -785,7 +804,7 @@ li {
 
 /* ---------------------------------------- 任务列表 ------------------------------------- */
 #write .md-task-list-item:before{
-    content: '';
+    content: none;
 }
 
 #write .md-task-list-item>input{
@@ -797,9 +816,6 @@ li {
 }
 
 #write .md-task-list-item>input:before {
-    position: relative;
-    top: var(--task-sign-top);
-    left: var(--task-sign-left);
     display: inline-block;
     content: '';
     width: var(--task-sign-width);
@@ -812,10 +828,6 @@ li {
 }
 
 #write .md-task-list-item>input[checked]:before{
-    position: relative;
-    top: var(--task-sign-top);
-    left: var(--task-sign-left);
-    display: inline-block;
     content: '\e63c';
     font-family: "iconfont";
     width: var(--task-sign-width);
@@ -823,6 +835,12 @@ li {
     text-align: center;
     vertical-align: middle;
     border: none;
+}
+
+#write input[type=checkbox] {
+    position: absolute;
+    top: var(--task-sign-top);
+    left: var(--task-sign-left);
 }
 
 #write .md-task-list-item p{
