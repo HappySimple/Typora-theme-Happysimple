@@ -856,7 +856,6 @@ li {
     text-align: center;
     border: var(--img-border);
     border-radius: var(--img-border-radius);
-    content: var(--img-name);
 }
 
 #write{
