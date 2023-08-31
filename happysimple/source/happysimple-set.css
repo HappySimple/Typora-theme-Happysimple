@@ -744,18 +744,22 @@ li {
     margin: 0px 0px 0px var(--order-list-li-indentation);
 }
 
-#write ol>li:before {
+#write ol>li::before {
     position: absolute;
     color: var(--order-list-sign-color);
     content: counter(li) ".";
-    counter-increment: li;
+    counter-increment: li 1;
     width: 22px;
     text-align: right;
     left: -12px;
 }
 
-#write ol li:first-child {
-    counter-reset: li;
+#write ol[start=""] {
+    counter-reset: li 0;
+}
+
+#write ol {
+    counter-reset: unset;
 }
 /* --------------------------------------------------------------------------------------- */
 
