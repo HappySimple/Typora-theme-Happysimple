@@ -754,7 +754,8 @@ li {
     left: -12px;
 }
 
-#write ol[start=""] {
+#write ol[start=""],
+#write ol:not([start]) {
     counter-reset: li 0;
 }
 
