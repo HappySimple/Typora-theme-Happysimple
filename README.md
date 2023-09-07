@@ -38,4 +38,4 @@
 
 ## 4.自定义主题
 
-请参考[HappySimple](https://www.happysimple.club/posts/works/一款自制的Typora主题.html)！
+请参考[HappySimple](https://www.happysimple.wang)！（网站备案中，暂时关闭）
