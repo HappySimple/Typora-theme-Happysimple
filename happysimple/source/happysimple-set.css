@@ -744,6 +744,7 @@ li {
     margin: 0px 0px 0px var(--order-list-li-indentation);
 }
 
+#write ul ol>li::before,
 #write ol>li::before {
     position: absolute;
     color: var(--order-list-sign-color);
@@ -781,11 +782,11 @@ li {
     margin: var(--unorder-list-li-margin);
 }
 
-#write ul li > * {
+#write ul>li > * {
     margin: 0px 0px 0px var(--unorder-list-li-indentation);
 }
 
-#write ul li:before {
+#write ul>li:before {
     position: absolute;
     top: var(--unorder-list-sign-top);
     left: var(--unorder-list-sign-left);
