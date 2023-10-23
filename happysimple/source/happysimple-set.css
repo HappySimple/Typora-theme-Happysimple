@@ -862,6 +862,7 @@ li {
     text-align: center;
     border: var(--img-border);
     border-radius: var(--img-border-radius);
+    /*content: var(--img-name); eg:counter(imgNum) */
 }
 
 #write{
@@ -885,7 +886,7 @@ li {
 figure{
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items:flex-start;
 }
 table {
     margin: var(--table-margin);

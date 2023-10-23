@@ -292,7 +292,6 @@
     --img-padding: 0px;
     --img-border: 2px solid #000;
     --img-border-radius: 5px;
-    --img-name: '';                                 /* 若想自动编号,用"Fig." counter(imgNum);替代 */
     --img-font-family: 'Times New Roman';
     --img-font-size: 1.0rem;
 
