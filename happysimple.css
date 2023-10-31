@@ -218,7 +218,7 @@
     /* 行内代码 */
     --inline-code-margin: 0px;
     --inline-code-padding: 2px 4px;
-    --inline-code-font-family: 'Consolas';
+    --inline-code-font-family: Monaco, Consolas;
     --inline-code-font-size: 0.9rem;
     --inline-code-font-weight: 400;
     --inline-code-color: #4c4c4c;
@@ -227,7 +227,7 @@
     --inline-code-border-radius: 2px;
 
     /* 代码块颜色 */
-    --code-font-family: 'Consolas';
+    --code-font-family: Monaco, Consolas;
     --code-font-size: 0.9rem;
     --code-font-weight: 400;
     --code-color: #a6accd;
