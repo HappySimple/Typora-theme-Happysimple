@@ -554,8 +554,22 @@ hr {
 /* ------------------------------------ 行内数学公式 -------------------------------------- */
 [md-inline='inline_math'] {
     color: var(--inline-eq-color);
+    font-size: var(--inline-eq-font-size);
+}
+
+h1 [md-inline='inline_math'] {
     border: 0;
-    /* font-size: var(--inline-eq-font-size); */
+    font-size: var(--h1-font-size);
+}
+
+h2 [md-inline='inline_math'] {
+    border: 0;
+    font-size: var(--h2-font-size);
+}
+
+h3 [md-inline='inline_math'] {
+    border: 0;
+    font-size: var(--h3-font-size);
 }
 /* --------------------------------------------------------------------------------------- */
 
